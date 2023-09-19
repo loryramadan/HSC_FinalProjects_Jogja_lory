@@ -43,7 +43,7 @@ function App() {
             <Route path="/things-to-do/museum-jogja/:id" element={<DetailMuseum />}/>
                         {/* ========= hotel =========== */}
             <Route path='/things-to-do/hotel-jogja' element={<HotelPageJogja />}></Route>
-            <Route path="/things-to-do/hotel-jogja/hotel-detail" element={<DetailHotel />}/>
+            <Route path="/things-to-do/hotel-jogja/:id" element={<DetailHotel />}/>
                         {/* ========= Art Activities =========== */}
             <Route path='/things-to-do/art-activities-jogja' element={<ArtActivitiesPage />}></Route>
             <Route path="/things-to-do/art-activities-jogja/detail-art" element={<DetailArt />}/>
