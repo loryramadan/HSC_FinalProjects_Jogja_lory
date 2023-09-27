@@ -58,6 +58,7 @@ function App() {
           </Route>
           <Route path="/menu-jogja" element={<MenuJogja />}></Route>
           <Route path="/saved-page" element={<SavedPageJogja />}></Route>
+          <Route path="/cart-page" element={<CartPage />}></Route>
           <Route path="/search-page" element={<SearchPage />}></Route>
           {/* ========= Practical Tips Page =========== */}
           <Route

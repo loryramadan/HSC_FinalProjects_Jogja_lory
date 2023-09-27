@@ -1,13 +1,16 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import 'boxicons';
-
+import {useContext} from 'react'
+import { CartContext } from '../contexts/CartContext';
 
 function ReuseNavRight() {
 
     const navigateToMenuJogja = useNavigate ()  
     const navigateToSavedPageJogja = useNavigate () 
     const navigateToSearchPageJogja = useNavigate () 
+    const navigateToCartPageJogja = useNavigate () 
+    const {cartProduct} = useContext(CartContext)
 
   return (
     <div className='flex gap-[1rem] w-fit h-[40px] 
@@ -30,6 +33,11 @@ function ReuseNavRight() {
             onClick={() => navigateToSavedPageJogja('/saved-page')}
             className='p-[8px] text-2xl w-[40px] flex items-center justify-center rounded-lg hover:bg-button2 transition duration-300 ease-in-out cursor-pointer text-[#000]'>
                 <i className='bx bx-heart'></i>
+        </div>
+        <div 
+            onClick={() => navigateToCartPageJogja('/cart-page')}
+            className='p-[8px] text-2xl w-[40px] flex items-center justify-center rounded-lg hover:bg-button2 transition duration-300 ease-in-out cursor-pointer text-[#000]'>
+                <i className='bx bx-cart'>({cartProduct.length})</i>
         </div>
         <div 
             onClick={() => navigateToMenuJogja('/menu-jogja')}

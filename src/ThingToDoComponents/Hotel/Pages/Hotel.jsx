@@ -35,18 +35,6 @@ const Hotel = () => {
               Here are some of the many accommodation you find in Jogja
             </p>
           </div>
-          <div className="space-x-4">
-            <a href="#hotel-map">
-              <button className="text-white border-2 hover:border-[#1D764A] py-2 px-5 rounded-md font-lora">
-                Road Map
-              </button>
-            </a>
-            <a href="#hotel-list">
-              <button className="text-white border-2 hover:border-[#1D764A] py-2 px-5 font-lora">
-                Read More
-              </button>
-            </a>
-          </div>
         </div>
       </div>
       <div id="hotel-list">

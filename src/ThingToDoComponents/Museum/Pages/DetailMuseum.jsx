@@ -3,6 +3,8 @@ import ReuseNav from "/src/Components/ReuseableNav/ReuseNav";
 import Footer from "/src/Components/Footer/Footer";
 import BotButton from "../../../Components/Landing/Landing-bot/BotButton";
 
+
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -13,9 +15,13 @@ import ImgSweper from "../Components/Atoms/ImgSweper";
 import axiosInstance from "../../../API/apiMuseum";
 
 import { useNavigate } from "react-router-dom";
+import { CartContext } from "../../../Components/contexts/CartContext";
+import {useContext} from 'react'
 
 export default function DetailMuseum() {
   // Route
+  const {addProduct} = useContext(CartContext);
+
   const navigateToMuseumPage = useNavigate();
 
   const [detail, setDetail] = useState({});
@@ -86,7 +92,7 @@ export default function DetailMuseum() {
               {detail?.description}
             </p>
             <div className="flex justify-center items-center my-5 ">
-              <button className="bg-button w-[145px] flex items-center px-4 py-2 rounded-xl">
+              <button onClick={() => addProduct(detail?.id)} className="bg-button w-[145px] flex items-center px-4 py-2 rounded-xl">
                 <p className="text-white me-1 font-Poppins">Buy Ticket </p>
                 <i className="bx bx-cart-alt text-[22px] text-white ml-1"></i>
               </button>
